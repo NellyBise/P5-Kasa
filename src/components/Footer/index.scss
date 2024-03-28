@@ -1,0 +1,13 @@
+.Footer{
+    background-color: black;
+    text-align: center;
+    padding-top: 66px;
+    padding-bottom: 29px; 
+    &__logo{
+        width: 122px;
+        margin-bottom: 28px;
+    }
+    &__text{
+        color: white;
+    }
+}
