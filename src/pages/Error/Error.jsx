@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import ErrorImage from "../../assets/404.svg"
-import "../Error/index.scss"
+import "./Error.scss"
 
 function Error() {
   return (
