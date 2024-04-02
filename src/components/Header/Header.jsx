@@ -4,9 +4,6 @@ import "./Header.scss"
 import { useState, useEffect } from "react";
 
 
-
-
-
 function Header() {
   const [currentPage, setCurrentPage] = useState('');
   const handleClick = (page) => {
@@ -26,12 +23,12 @@ function Header() {
             className={`header__link ${currentPage === "" ? "header__link--selected" : ""}`}
             onClick={()=>handleClick("")}
             to="/"
-          > Accueil </Link>
+          >Accueil</Link>
           <Link
             className={`header__link ${currentPage === "APropos" ? "header__link--selected" : ""}`}
             onClick={()=>handleClick("APropos")}
             to="/APropos"
-          > A propos </Link>
+          >A Propos</Link>
         </ul>
       </nav>
     </header>

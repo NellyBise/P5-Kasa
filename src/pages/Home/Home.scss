@@ -2,36 +2,8 @@
 
 .Home{
     width: 100%;
-    &__banner{
-        position: relative;
-        display: inline-block;
-        @include large-container;
-        width: 100%;
-        height: 223px;
-        box-shadow: $shadow;
-    }
-    &__image{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;   
-    }
-    &__title{
-        background: rgba(0, 0, 0, 0.6);
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top:0;
-        width: 100%;
-        height: 100%;
-        color: white;
-        font-size: 3em;
-        font-weight: 700;
-        text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px, $shadow;
-    }
     &__gallery{
         padding: 50px;
-        background-color: #F6F6F6;
         display: grid;
         gap: 60px;
         grid-template-rows: repeat(2, 1fr);

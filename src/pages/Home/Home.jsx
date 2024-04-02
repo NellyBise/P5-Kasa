@@ -3,14 +3,16 @@ import Card from "../../components/Card/Card"
 import "./Home.scss"
 import DataBase from "../../Data/database.json"
 import BannerImage from "../../assets/home-background.jpg"
+import Banner from "../../components/Banner/Banner"
 
 function Home() {
   return (
     <main className="Home">
-      <div className="Home__banner">
-            <img className="Home__image" src={BannerImage} alt="falaises" />
-            <h1 className="Home__title">Chez vous, partout et ailleurs</h1>
-      </div>
+      <Banner
+        BannerImage={BannerImage}
+        text= "Chez vous, partout et ailleurs"
+        lighter="false"
+      />
       <section className= "Home__gallery">
         {DataBase.map((location) => (
             <Card

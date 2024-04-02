@@ -1,0 +1,50 @@
+@import "../../index.scss";
+
+.Collapse{
+    margin-bottom: 30px;
+    &__button{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: left;
+    background-color: $main-color ;
+    height: 52px;
+    padding: 10px;
+    width:100%; 
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index:2;
+    }
+    &__arrow{
+        padding: 5px;
+        transition: transform 400ms;
+        &:hover{
+            cursor: pointer;
+        }
+        &.active{
+            transform: rotate(-180deg);
+        } 
+    }
+    &__box{
+        max-height:0;
+        font-size: 18px;
+        line-height :1.5em;
+        @include large-container;
+        border-radius: 5px;
+        z-index:1;
+        transform: translateY(-5px);
+        margin: 0;
+        transition : max-height 600ms;
+        &.active{
+            max-height: 210px;
+        }
+    }
+    &__content{
+        padding: 20px;
+    }
+    
+}
