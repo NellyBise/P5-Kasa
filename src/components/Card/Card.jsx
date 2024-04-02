@@ -2,9 +2,9 @@ import "./Card.scss"
 
 function Card({title, picture }) {
     return (
-      <div class="Card">
-        <img class="Card__image" src={picture} alt="vue du logement" />
-        <h2 class="Card__title">{title}</h2>
+      <div className="Card">
+        <img className="Card__image" src={picture} alt="vue du logement" />
+        <h2 className="Card__title">{title}</h2>
       </div>
     )
   }

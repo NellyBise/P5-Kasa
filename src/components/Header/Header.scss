@@ -8,12 +8,17 @@
     }
     &__link{
         font-size: 24px;
+        font-weight: 500;
         text-decoration: none;
         color: black;
         margin-left: 57px;
         &:hover {
             text-decoration: underline;
-        }    
+        }
+        &--selected{
+            text-decoration: underline;
+        }
+            
     }
 }
     

@@ -6,12 +6,12 @@ import BannerImage from "../../assets/home-background.jpg"
 
 function Home() {
   return (
-    <main class="Home">
-      <div class="Home__banner">
-            <img class="Home__image" src={BannerImage} alt="falaises" />
-            <h1 class="Home__title">Chez vous, partout et ailleurs</h1>
+    <main className="Home">
+      <div className="Home__banner">
+            <img className="Home__image" src={BannerImage} alt="falaises" />
+            <h1 className="Home__title">Chez vous, partout et ailleurs</h1>
       </div>
-      <section class= "Home__gallery">
+      <section className= "Home__gallery">
         {DataBase.map((location) => (
             <Card
               key={`${location.id}`}
