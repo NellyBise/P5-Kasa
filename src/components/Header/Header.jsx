@@ -1,34 +1,37 @@
-import { Link } from "react-router-dom"
-import Logo from "../../assets/LOGO.svg"
-import "./Header.scss"
-import { useState, useEffect } from "react";
-
+import { NavLink } from 'react-router-dom'
+import Logo from '../../assets/LOGO.svg'
+import './Header.scss'
 
 function Header() {
-  const [currentPage, setCurrentPage] = useState('');
-  const handleClick = (page) => {
-    setCurrentPage(page);
-  };
-  useEffect(() => {
-    const pathname = window.location.pathname;
-    setCurrentPage(pathname.substring(1));  
-  }, []);
-
   return (
     <header className="header">
-      <img className="header__logo" src={Logo} alt="logo Kasa"/>
+      <img className="header__logo" src={Logo} alt="logo Kasa" />
       <nav>
         <ul>
-          <Link
-            className={`header__link ${currentPage === "" ? "header__link--selected" : ""}`}
-            onClick={()=>handleClick("")}
+          <NavLink
             to="/"
-          >Accueil</Link>
-          <Link
-            className={`header__link ${currentPage === "APropos" ? "header__link--selected" : ""}`}
-            onClick={()=>handleClick("APropos")}
-            to="/APropos"
-          >A Propos</Link>
+            className={({ isActive, isPending }) =>
+              [
+                'header__link',
+                isPending ? 'header__link--active' : '',
+                isActive ? 'header__link--active' : '',
+              ].join(' ')
+            }
+          >
+            Accueil
+          </NavLink>
+          <NavLink
+            to="/About"
+            className={({ isActive, isPending }) =>
+              [
+                'header__link',
+                isPending ? 'header__link--active' : '',
+                isActive ? 'header__link--active' : '',
+              ].join(' ')
+            }
+          >
+            A Propos
+          </NavLink>
         </ul>
       </nav>
     </header>

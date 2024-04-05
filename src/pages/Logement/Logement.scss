@@ -1,0 +1,61 @@
+@import "../../index.scss";
+
+.Logement{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    &__titles{
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+    }
+    &__title{
+        color: $main-color;
+        font-size: 2.2em;   
+    }
+    &__text{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    &__tags{
+        display: flex;
+    }
+    &__tag{
+        background-color: $main-color;
+        margin: 20px 10px 20px 0;
+        padding: 0 10px;
+        border-radius: 10px;
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        min-width: 95px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__owner{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    &__ownerName{
+        color: $main-color;
+        font-size: 18px;
+        font-weight:500;
+        width: 90px;
+        text-align: end;
+        line-height: 1.5em;
+        margin: 0 10px;
+    }
+    &__ownerPicture{
+        height: 64px;
+        border-radius: 50%;
+    }
+    &__description{
+        display: grid;
+        gap: 4.5em;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 20px;
+    }
+}
