@@ -16,6 +16,10 @@
             display: block;
             max-width: 100%;
         }
+        @media all and (max-width: 600px) {
+            height: 225px;
+            border-radius: 10px;
+        }
     }
     &__nav{
         display: flex;
@@ -23,6 +27,9 @@
         width: 100%;
         position: absolute;
         bottom: 35%;
+        @media all and (max-width: 600px) {
+            bottom: 40%;
+        }
     }
     &__button{
         border: none;
@@ -35,11 +42,18 @@
         &--right{
             transform: rotate(180deg);
         }
+        @media all and (max-width: 600px) {
+            height: 19.8px;
+            padding:6px;
+        }
     }
     &__count{
         color: white;
         position: absolute;
         bottom: 5%;
         left: 49%;
+        @media all and (max-width: 600px) {
+            display: none;
+        }
     }
 }

@@ -1,7 +1,7 @@
 import Home from './pages/Home/Home'
 import Error from './pages/Error/Error'
 import About from './pages/About/About'
-import Logement from './pages/Logement/Logement'
+import Housing from './pages/Housing/Housing'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/:id',
-    element: <Logement />,
+    element: <Housing />,
     errorElement: <Error />,
   },
 ])

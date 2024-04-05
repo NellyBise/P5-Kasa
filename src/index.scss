@@ -53,6 +53,9 @@ body {
   margin: auto;
   font-family: 'Montserrat',sans-serif;
   max-width: 1240px;
+  @media all and (max-width:1024px) {
+	margin: 20px;
+  }
 }
 
 $main-color: #FF6060;

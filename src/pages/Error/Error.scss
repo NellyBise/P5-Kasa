@@ -7,15 +7,31 @@
     justify-content: space-between;
     height: 600px;
     padding: 139px 0;
-   
-    &__image{
-        width: 597px;
+    &__title{
+        font-size: 288px;
+        font-weight: 700;
+        color: $main-color;
+        @media all and (max-width: 1024px) {
+            font-size: 192px;
+        }
+        @media all and (max-width: 600px) {
+            font-size: 96px;
+        }
     }
     &__text{
         color: $main-color;
         font-size: 36px;
+        font-weight: 500;;
+         @media all and (max-width: 1024px) {
+            font-size: 24px;
+        }
+        @media all and (max-width: 600px) {
+            font-size: 18px;
+        }
     }
     &__link{
         color: black;
+        font-size: 14px;
+        font-weight: 500;
     }
 }
