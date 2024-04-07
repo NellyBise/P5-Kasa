@@ -2,7 +2,6 @@ import Banner from '../../components/Banner/Banner'
 import BannerImage from '../../assets/About-background.jpg'
 import Collapse from '../../components/Collapse/Collapse'
 import './About.scss'
-import Header from '../../components/Header/Header'
 
 const values = [
   {
@@ -30,7 +29,6 @@ const values = [
 function About() {
   return (
     <div>
-      <Header />
       <Banner BannerImage={BannerImage} text="" lighter="true" />
       <div className="About">
         {values.map((value) => (

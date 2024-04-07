@@ -7,31 +7,35 @@ function Header() {
     <header className="header">
       <img className="header__logo" src={Logo} alt="logo Kasa" />
       <nav>
-        <ul>
-          <NavLink
-            to="/"
-            className={({ isActive, isPending }) =>
-              [
-                'header__link',
-                isPending ? 'header__link--active' : '',
-                isActive ? 'header__link--active' : '',
-              ].join(' ')
-            }
-          >
-            Accueil
-          </NavLink>
-          <NavLink
-            to="/About"
-            className={({ isActive, isPending }) =>
-              [
-                'header__link',
-                isPending ? 'header__link--active' : '',
-                isActive ? 'header__link--active' : '',
-              ].join(' ')
-            }
-          >
-            A Propos
-          </NavLink>
+        <ul className="header__navigation">
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive, isPending }) =>
+                [
+                  'header__link',
+                  isPending ? 'header__link--active' : '',
+                  isActive ? 'header__link--active' : '',
+                ].join(' ')
+              }
+            >
+              Accueil
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/About"
+              className={({ isActive, isPending }) =>
+                [
+                  'header__link',
+                  isPending ? 'header__link--active' : '',
+                  isActive ? 'header__link--active' : '',
+                ].join(' ')
+              }
+            >
+              A Propos
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

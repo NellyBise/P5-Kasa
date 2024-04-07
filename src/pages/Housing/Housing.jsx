@@ -1,8 +1,7 @@
-import Header from '../../components/Header/Header'
+import './Housing.scss'
 import { useParams } from 'react-router-dom'
 import DataBase from '../../Data/database.json'
 import Collapse from '../../components/Collapse/Collapse'
-import './Housing.scss'
 import Slideshow from '../../components/Slideshow/Slideshow'
 import Stars from '../../components/Stars/Stars'
 
@@ -12,7 +11,6 @@ function Housing() {
 
   return (
     <div>
-      <Header />
       <Slideshow pictures={HousingId.pictures} />
       <div className="Housing">
         <div className="Housing__titles">

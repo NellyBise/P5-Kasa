@@ -2,28 +2,20 @@ import Home from './pages/Home/Home'
 import Error from './pages/Error/Error'
 import About from './pages/About/About'
 import Housing from './pages/Housing/Housing'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
+import App from './App'
 
-const router = createBrowserRouter([
+const Router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <App />,
     errorElement: <Error />,
-  },
-  {
-    path: '/About',
-    element: <About />,
-    errorElement: <Error />,
-  },
-  {
-    path: '/:id',
-    element: <Housing />,
-    errorElement: <Error />,
+    children: [
+      { path: '/', index: true, element: <Home /> },
+      { path: '/:id', element: <Housing /> },
+      { path: '/About', element: <About /> },
+    ],
   },
 ])
-
-const Router = () => {
-  return <RouterProvider router={router} />
-}
 
 export default Router

@@ -9,6 +9,10 @@
             height: 47px;
          } 
     }
+    &__navigation{
+        display: flex;
+        
+    }
     &__link{
         font-size: 24px;
         font-weight: 500;
