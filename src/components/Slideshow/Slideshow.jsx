@@ -31,21 +31,31 @@ function Slideshow({ pictures }) {
           />
         </div>
       ))}
-      <div className="Slideshow__nav">
-        <button className="Slideshow__button" onClick={PrevPicture}>
-          <img className="Slideshow__arrow" src={Arrow} alt="flèche gauche" />
-        </button>
-        <button className="Slideshow__button" onClick={NextPicture}>
-          <img
-            className="Slideshow__arrow  Slideshow__arrow--right"
-            src={Arrow}
-            alt="flèche droite"
-          />
-        </button>
-      </div>
-      <div className="Slideshow__count">
-        {clickedIndex + 1}/{pictures.length}
-      </div>
+      {pictures.length > 1 ? (
+        <div>
+          <div className="Slideshow__nav">
+            <button className="Slideshow__button" onClick={PrevPicture}>
+              <img
+                className="Slideshow__arrow"
+                src={Arrow}
+                alt="flèche gauche"
+              />
+            </button>
+            <button className="Slideshow__button" onClick={NextPicture}>
+              <img
+                className="Slideshow__arrow  Slideshow__arrow--right"
+                src={Arrow}
+                alt="flèche droite"
+              />
+            </button>
+          </div>
+          <div className="Slideshow__count">
+            {clickedIndex + 1}/{pictures.length}
+          </div>
+        </div>
+      ) : (
+        ''
+      )}
     </section>
   )
 }
