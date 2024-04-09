@@ -4,12 +4,12 @@ import DataBase from '../../Data/database.json'
 import Collapse from '../../components/Collapse/Collapse'
 import Slideshow from '../../components/Slideshow/Slideshow'
 import Stars from '../../components/Stars/Stars'
+import Error from '../Error/Error'
 
 function Housing() {
   const identifiant = useParams()
   const HousingId = DataBase.find((housing) => housing.id === identifiant.id)
-  console.log(identifiant.id)
-  return (
+  return HousingId ? (
     <div>
       <Slideshow pictures={HousingId.pictures} picturesId={identifiant.id} />
       <div className="Housing">
@@ -51,6 +51,8 @@ function Housing() {
         />
       </div>
     </div>
+  ) : (
+    <Error />
   )
 }
 export default Housing

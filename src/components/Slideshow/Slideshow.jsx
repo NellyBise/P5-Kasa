@@ -2,9 +2,8 @@ import './Slideshow.scss'
 import Arrow from '../../assets/Vector-carousel.svg'
 import { useState } from 'react'
 
-function Slideshow({ pictures, picturesId }) {
+function Slideshow({ pictures }) {
   const [clickedIndex, setClickedIndex] = useState(0)
-
   const NextPicture = () => {
     setClickedIndex((prevIndex) => (prevIndex + 1) % pictures.length)
   }
@@ -13,37 +12,24 @@ function Slideshow({ pictures, picturesId }) {
       (prevIndex) => (prevIndex - 1 + pictures.length) % pictures.length
     )
   }
-
-  function slideTo(index) {
-    currentSlide = index >= pictures.length || index < 1 ? 0 : index
-    // Boucle sur tous les éléments de type "slide" pour les déplacer
-    $slides.forEach(
-      ($elt) => ($elt.style.transform = `translateX(-${currentSlide * 100}%)`)
-    )
-    // Boucle sur tous les "dots" pour mettre à jour la couleur par la classe "active" ou "inactive"
-    $dots.forEach(
-      ($elt, key) =>
-        ($elt.classList = `dot ${key === currentSlide ? 'active' : 'inactive'}`)
-    )
+  const containerStyle = {
+    transform: `translateX(-${clickedIndex * 100}%)`,
   }
 
   return (
     <section className="Slideshow">
-      {pictures.map((picture, index) => (
-        <div className="Slideshow__inner">
-          <img
-            id={`${picturesId}-${index}`}
-            key={`${picturesId}-${index}`}
-            className={
-              index === clickedIndex
-                ? 'Slideshow__picture Slideshow__picture--active'
-                : 'Slideshow__picture'
-            }
-            src={picture}
-            alt="vue du logement"
-          />
-        </div>
-      ))}
+      <div className="Slideshow__container" style={containerStyle}>
+        {pictures.map((picture, index) => (
+          <div className="Slideshow__picture" key={index}>
+            <img
+              className="Slideshow__pictures"
+              id={index}
+              src={picture}
+              alt="vue du logement"
+            />
+          </div>
+        ))}
+      </div>
       {pictures.length > 1 ? (
         <div>
           <div className="Slideshow__nav">
