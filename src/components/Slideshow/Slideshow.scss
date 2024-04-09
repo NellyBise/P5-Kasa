@@ -3,18 +3,21 @@
 .Slideshow{
     margin: 20px 0;
     position: relative;
-    width: 100%;
+    @include large-container;
+    height: 415px;
+    &__inner{
+       display: flex; 
+       flex-wrap: nowrap;
+       overflow: hidden;
+    }
     &__picture{
-        display:none;
-        max-width: 0;
+        flex: 0 0 100%;
         @include large-container;
         height: 415px;
-        width:100%;
         object-fit: cover;
-        transition : max-height 6000ms;
+        transition: .5s ease-in-out;
         &--active{
             display: block;
-            max-width: 100%;
         }
         @media all and (max-width: 600px) {
             height: 225px;

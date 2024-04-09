@@ -3,7 +3,7 @@
 .Collapse{
     margin-bottom: 30px;
     @media all and (max-width: 600px) {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     &__button{
     color: white;
@@ -33,7 +33,7 @@
             cursor: pointer;
         }
         &.active{
-            transform: rotate(-180deg);
+            transform: translateX(-100%);
         }
         @media all and (max-width: 600px) {
             width: 16px;

@@ -8,10 +8,10 @@ import Stars from '../../components/Stars/Stars'
 function Housing() {
   const identifiant = useParams()
   const HousingId = DataBase.find((housing) => housing.id === identifiant.id)
-
+  console.log(identifiant.id)
   return (
     <div>
-      <Slideshow pictures={HousingId.pictures} />
+      <Slideshow pictures={HousingId.pictures} picturesId={identifiant.id} />
       <div className="Housing">
         <div className="Housing__titles">
           <div>
