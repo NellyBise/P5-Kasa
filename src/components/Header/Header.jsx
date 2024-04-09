@@ -33,7 +33,7 @@ function Header() {
                 ].join(' ')
               }
             >
-              A Propos
+              À Propos
             </NavLink>
           </li>
         </ul>

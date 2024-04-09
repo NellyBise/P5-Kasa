@@ -28,14 +28,14 @@ const values = [
 
 function About() {
   return (
-    <div>
+    <section>
       <Banner BannerImage={BannerImage} text="" lighter="true" />
-      <div className="About">
+      <article className="About">
         {values.map((value) => (
           <Collapse key={value.id} title={value.title} text={value.text} />
         ))}
-      </div>
-    </div>
+      </article>
+    </section>
   )
 }
 export default About

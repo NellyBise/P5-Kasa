@@ -17,7 +17,7 @@ function Slideshow({ pictures }) {
   }
 
   return (
-    <section className="Slideshow">
+    <article className="Slideshow">
       <div className="Slideshow__container" style={containerStyle}>
         {pictures.map((picture, index) => (
           <div className="Slideshow__picture" key={index}>
@@ -55,7 +55,7 @@ function Slideshow({ pictures }) {
       ) : (
         ''
       )}
-    </section>
+    </article>
   )
 }
 

@@ -1,7 +1,19 @@
 .Stars{
     margin: 20px 0;
     text-align: right;
+    width: 200px;
     &__picture{
-       padding: 7px 
+       padding: 7px;
+       @media all and (max-width: 1024px){
+        height: 18px;
+        padding: 5px;
+   }
+       @media all and (max-width: 600px){
+            height: 13px;
+            padding: 3px;
+       }
+    }
+    @media all and (max-width: 600px){
+        text-align: left;
     }
 }

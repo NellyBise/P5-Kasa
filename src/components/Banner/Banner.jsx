@@ -2,7 +2,7 @@ import './Banner.scss'
 
 function Banner({ BannerImage, text, lighter }) {
   return (
-    <div className="Banner">
+    <article className="Banner">
       <img className="Banner__image" src={BannerImage} alt="falaises" />
       <div
         className={`Banner__shadow ${
@@ -11,7 +11,7 @@ function Banner({ BannerImage, text, lighter }) {
       >
         <h1 className="Banner__title">{text}</h1>
       </div>
-    </div>
+    </article>
   )
 }
 

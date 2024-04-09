@@ -3,7 +3,7 @@
 .Collapse{
     margin-bottom: 30px;
     @media all and (max-width: 600px) {
-        margin-bottom: 20px;
+        margin-bottom: 0px;
     }
     &__button{
     color: white;
@@ -24,6 +24,7 @@
     @media all and (max-width: 600px) {
         height: 30px;
         font-size: 13px;
+
     }
     }
     &__arrow{

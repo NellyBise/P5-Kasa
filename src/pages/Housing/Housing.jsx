@@ -1,21 +1,32 @@
 import './Housing.scss'
 import { useParams } from 'react-router-dom'
-import DataBase from '../../Data/database.json'
 import Collapse from '../../components/Collapse/Collapse'
 import Slideshow from '../../components/Slideshow/Slideshow'
 import Stars from '../../components/Stars/Stars'
 import Error from '../Error/Error'
+import { useFetch } from '../../utils/hook'
 
 function Housing() {
   const identifiant = useParams()
-  const HousingId = DataBase.find((housing) => housing.id === identifiant.id)
+  const { data, isLoading, error } = useFetch(`/database.json`)
+  const dataBase = data
+
+  if (error) {
+    return <span>Il y a un problème</span>
+  }
+  if (isLoading === true) {
+    return <span>Chargement en cours...</span>
+  }
+
+  const HousingId = dataBase?.find((housing) => housing.id === identifiant.id)
+  let HostName = HousingId.host.name.split(' ')
   return HousingId ? (
-    <div>
+    <section>
       <Slideshow pictures={HousingId.pictures} picturesId={identifiant.id} />
-      <div className="Housing">
+      <article className="Housing">
         <div className="Housing__titles">
           <div>
-            <h2 className="Housing__title">{HousingId.title}</h2>
+            <h1 className="Housing__title">{HousingId.title}</h1>
             <p className="Housing__text">{HousingId.location}</p>
           </div>
           <div className="Housing__tags">
@@ -28,7 +39,11 @@ function Housing() {
         </div>
         <div className="Housing__ownerStars">
           <div className="Housing__owner">
-            <p className="Housing__ownerName">{HousingId.host.name}</p>
+            <div className="Housing__ownerName">
+              {HostName.map((host) => (
+                <p key={host}>{host}</p>
+              ))}
+            </div>
             <img
               className="Housing__ownerPicture"
               src={HousingId.host.picture}
@@ -37,8 +52,8 @@ function Housing() {
           </div>
           <Stars StarsNumber={HousingId.rating} />
         </div>
-      </div>
-      <div className="Housing__description">
+      </article>
+      <article className="Housing__description">
         <Collapse title="Description" text={HousingId.description} />
         <Collapse
           title="Équipements"
@@ -49,8 +64,8 @@ function Housing() {
             </div>
           ))}
         />
-      </div>
-    </div>
+      </article>
+    </section>
   ) : (
     <Error />
   )

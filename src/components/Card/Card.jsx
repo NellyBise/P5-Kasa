@@ -9,16 +9,4 @@ function Card({ title, picture }) {
   )
 }
 
-/*Card.propTypes = {
-    label: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired,
-  }
-  
-  Card.defaultProps = {
-    label: '',
-    title: '',
-    picture: DefaultPicture,
-  }*/
-
 export default Card
