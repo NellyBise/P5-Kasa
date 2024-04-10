@@ -6,9 +6,16 @@ function Collapse({ title, text }) {
   const [isOpen, setIsOpen] = useState(false)
   const toggle = () => setIsOpen(!isOpen)
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      toggle()
+    }
+  }
+
   return (
     <div className="Collapse">
-      <button className="Collapse__button">
+      <button className="Collapse__button" onKeyDown={handleKeyDown}>
         <div>{title}</div>
         {isOpen ? (
           <img
