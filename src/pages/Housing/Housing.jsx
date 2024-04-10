@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import Collapse from '../../components/Collapse/Collapse'
 import Slideshow from '../../components/Slideshow/Slideshow'
 import Stars from '../../components/Stars/Stars'
+import Tags from '../../components/Tags/Tags'
 import Error from '../Error/Error'
 import { useFetch } from '../../utils/hook'
 
@@ -30,13 +31,7 @@ function Housing() {
             <h1 className="Housing__title">{HousingId.title}</h1>
             <p className="Housing__text">{HousingId.location}</p>
           </div>
-          <div className="Housing__tags">
-            {HousingId.tags.map((tag) => (
-              <div className="Housing__tag" key={tag}>
-                {tag}
-              </div>
-            ))}
-          </div>
+          <Tags tagsContent={HousingId.tags} />
         </div>
         <div className="Housing__ownerStars">
           <div className="Housing__owner">

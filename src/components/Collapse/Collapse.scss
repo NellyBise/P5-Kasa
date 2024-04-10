@@ -2,6 +2,7 @@
 
 .Collapse{
     margin-bottom: 30px;
+    overflow: hidden;
     @media all and (max-width: 600px) {
         margin-bottom: 0px;
     }
@@ -41,18 +42,18 @@
         } 
     }
     &__box{
-        max-height:0;
+        max-height:0px;
         font-size: 18px;
         line-height :1.5em;
         @include large-container;
         border-radius: 5px;
         z-index:1;
-        transform: translateY(-50px);
+        transform: translateY(-150%);
         margin: 0;
-        transition : transform 500ms;
+        transition : all 400ms;
         &.active{
-            max-height: 210px;
             transform: translateY(-5px);
+            max-height: 210px;
         }
         @media all and (max-width: 600px) {
             font-size: 12px;

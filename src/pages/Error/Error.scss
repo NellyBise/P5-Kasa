@@ -21,7 +21,6 @@
     &__text{
         color: $main-color;
         font-size: 36px;
-        font-weight: 500;;
          @media all and (max-width: 1024px) {
             font-size: 24px;
         }
@@ -32,6 +31,5 @@
     &__link{
         color: black;
         font-size: 14px;
-        font-weight: 500;
     }
 }
