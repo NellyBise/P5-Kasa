@@ -25,7 +25,7 @@ function Slideshow({ pictures }) {
               className="Slideshow__pictures"
               id={index}
               src={picture}
-              alt="vue du logement"
+              alt={`vue du logement : ${index}`}
             />
           </div>
         ))}
