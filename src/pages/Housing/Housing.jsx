@@ -19,7 +19,8 @@ function Housing() {
   }
 
   const HousingId = dataBase?.find((housing) => housing.id === identifiant.id)
-  let HostName = HousingId.host.name.split(' ')
+  let HostName = HousingId?.host?.name.split(' ')
+
   return HousingId ? (
     <section>
       <Slideshow pictures={HousingId.pictures} picturesId={identifiant.id} />

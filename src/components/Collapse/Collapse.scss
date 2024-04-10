@@ -47,11 +47,12 @@
         @include large-container;
         border-radius: 5px;
         z-index:1;
-        transform: translateY(-5px);
+        transform: translateY(-50px);
         margin: 0;
-        transition : max-height 600ms;
+        transition : transform 500ms;
         &.active{
             max-height: 210px;
+            transform: translateY(-5px);
         }
         @media all and (max-width: 600px) {
             font-size: 12px;
