@@ -1,10 +1,12 @@
+@import "../../style-variables/variables.scss";
+
 .About{
     width: 82%;
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    @media all and (max-width: 600px) {
+    @media all and (max-width: $smartphone) {
         margin:0;
         width: 100%;
         margin-top: 10px;

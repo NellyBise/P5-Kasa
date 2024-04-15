@@ -1,0 +1,18 @@
+
+$main-color: #FF6060;
+
+$shadow: 0px 4px 4px rgba(0,0,0,0.25);
+
+$smartphone: 480px;
+
+$pad: 1024px;
+
+@mixin large-container {
+  border-radius : 25px;
+  overflow: hidden;
+  margin: 20px 0;
+  background-color: #F6F6F673;
+  @media all and (max-width: $smartphone){
+	margin: 10px 0;
+  }
+}

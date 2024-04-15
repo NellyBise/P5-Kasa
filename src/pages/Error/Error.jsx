@@ -7,7 +7,7 @@ function Error() {
       <main className="Error">
         <h2 className="Error__title">404</h2>
         <p className="Error__text">
-          Oups! La page que vous demandez n'existe pas
+          Oups! La page que <span>vous demandez n'existe pas</span>
         </p>
         <Link className="Error__link" to="/">
           {' '}

@@ -1,4 +1,4 @@
-@import "../../index.scss";
+@import "../../style-variables/variables.scss";
 
 .Banner{
     position: relative;
@@ -7,7 +7,7 @@
     width: 100%;
     height: 223px;
     box-shadow: $shadow;
-    @media all and (max-width:600px) {
+    @media all and (max-width:$smartphone) {
         height: 111px;
         border-radius: 5px;
         box-shadow: none;
@@ -42,10 +42,10 @@
         &--lighter{
             background: rgba(0, 0, 0, 0.3);
         }
-        @media all and (max-width:1024px) {
+        @media all and (max-width:$pad) {
             font-size: 36px;
         }
-        @media all and (max-width:600px) {
+        @media all and (max-width:$smartphone) {
             font-size: 24px;
             justify-content: flex-start;
             padding-left: 10px;

@@ -1,9 +1,9 @@
-@import "../../index.scss";
+@import "../../style-variables/variables.scss";
 
 .Collapse{
     margin-bottom: 30px;
     overflow: hidden;
-    @media all and (max-width: 600px) {
+    @media all and (max-width: $smartphone) {
         margin-bottom: 0px;
     }
     &__button{
@@ -22,7 +22,10 @@
     align-items: center;
     position: relative;
     z-index:2;
-    @media all and (max-width: 600px) {
+    @media all and (max-width: $pad) {
+        font-size: 18px;
+    }
+    @media all and (max-width: $smartphone) {
         height: 30px;
         font-size: 13px;
 
@@ -37,8 +40,9 @@
         &.active{
             transform: rotate(-180deg);
         }
-        @media all and (max-width: 600px) {
+        @media all and (max-width: $smartphone) {
             width: 16px;
+
         } 
     }
     &__box{
@@ -54,13 +58,19 @@
         &.active{
             transform: translateY(-5px);
             max-height: 210px;
+            @media all and (max-width: $smartphone) {
+                transform: translateY(-15px);
+            }
         }
-        @media all and (max-width: 600px) {
+        @media all and (max-width: $smartphone) {
             font-size: 12px;
         }
     }
     &__content{
-        padding: 20px;
+        padding: 16px 20px;
+        @media all and (max-width: $smartphone) {
+            padding-bottom: 13px
+        }
     }
     &--medium{
         width: 50%;

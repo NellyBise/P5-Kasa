@@ -1,43 +1,43 @@
-@import "../../index.scss";
+@import "../../style-variables/variables.scss";
 
 .Housing{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
-    @media all and (max-width: 600px) {
+    @media all and (max-width: 800px) {
         flex-direction: column;
     }
     &__titles{
         display: flex;
         flex-direction: column;
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 800px) {
             width: 100%;
         }
     }
     &__title{
         color: $main-color;
         font-size: 36px;
-        @media all and (max-width: 1024px) {
+        @media all and (max-width: $pad) {
             font-size: 24px;
         } 
-        @media all and (max-width: 600px) {
+        @media all and (max-width: $smartphone) {
             font-size: 18px;
         }   
     }
     &__text{
         font-size: 18px;
         margin: 10px 0;
-        @media all and (max-width: 1024px) {
+        @media all and (max-width: $pad) {
             font-size: 16px;
         } 
-        @media all and (max-width: 600px) {
+        @media all and (max-width: $smartphone) {
             font-size: 14px;
         } 
     }
     &__ownerStars{
         display: flex;
         flex-direction: column;
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 800px) {
             flex-direction: row-reverse;
             justify-content: space-between;
         }
@@ -46,7 +46,7 @@
         display: flex;
         align-items: center;
         justify-content: end;
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 800px) {
             margin-bottom: 13px
         }
 
@@ -58,20 +58,20 @@
         text-align: end;
         line-height: 1.5em;
         margin: 0 10px;
-        @media all and (max-width: 1024px) {
+        @media all and (max-width: $pad) {
             font-size: 16px;
         }
-        @media all and (max-width: 600px) {
+        @media all and (max-width: $smartphone) {
             font-size: 12px;
         }
     }
     &__ownerPicture{
         height: 64px;
         border-radius: 50%;
-        @media all and (max-width: 1024px) {
+        @media all and (max-width: $pad) {
             height: 48px;
         }
-        @media all and (max-width: 600px) {
+        @media all and (max-width: $smartphone) {
             height: 32px;
         }
     }
@@ -80,7 +80,7 @@
         gap: 4.5em;
         grid-template-columns: repeat(2, 1fr);
         margin-bottom: 20px;
-        @media all and (max-width: 600px) {
+        @media all and (max-width: $smartphone) {
             display: flex;
             flex-direction: column;
             gap: 0;

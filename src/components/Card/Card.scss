@@ -1,9 +1,11 @@
+@import "../../style-variables/variables.scss";
+
 .Card{
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     aspect-ratio: 1/1;
-    @media all and (max-width: 600px) {
+    @media all and (max-width: $smartphone) {
         height: 255px;
         width: 100%;
     }

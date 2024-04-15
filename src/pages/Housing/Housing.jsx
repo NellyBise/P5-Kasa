@@ -5,6 +5,7 @@ import Slideshow from '../../components/Slideshow/Slideshow'
 import Stars from '../../components/Stars/Stars'
 import Tags from '../../components/Tags/Tags'
 import Error from '../Error/Error'
+import { Loader } from '../../components/Loader/Loader'
 import { useFetch } from '../../utils/hook'
 
 function Housing() {
@@ -16,7 +17,7 @@ function Housing() {
     return <span>Il y a un problème</span>
   }
   if (isLoading === true) {
-    return <span>Chargement en cours...</span>
+    return <Loader />
   }
 
   const HousingId = dataBase?.find((housing) => housing.id === identifiant.id)
