@@ -30,28 +30,28 @@ function Home() {
         <Loader />
       ) : (
         <article className="Home__gallery">
-          {dataBase?.slice(0, 12)?.map((location) => (
-            <Link key={location.id} to={`/${location.id}`}>
+          {dataBase?.slice(0, 12)?.map((housing) => (
+            <Link key={housing.id} to={`/${housing.id}`}>
               <Card
-                key={`${location.id}`}
-                picture={location.cover}
-                title={location.title}
+                key={`${housing.id}`}
+                picture={housing.cover}
+                title={housing.title}
               />
             </Link>
           ))}
 
-          {dataBase?.slice(12, dataBase.length)?.map((location) => (
+          {dataBase?.slice(12, dataBase.length)?.map((housing) => (
             <Link
               className={
                 isChange ? 'Home__galleryEnd' : 'Home__galleryEnd--active'
               }
-              key={location.id}
-              to={`/${location.id}`}
+              key={housing.id}
+              to={`/${housing.id}`}
             >
               <Card
-                key={`${location.id}`}
-                picture={location.cover}
-                title={location.title}
+                key={`${housing.id}`}
+                picture={housing.cover}
+                title={housing.title}
               />
             </Link>
           ))}

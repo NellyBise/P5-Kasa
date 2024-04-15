@@ -9,6 +9,14 @@
     flex-direction: column;
     align-items: center;
     margin: 50px;
+    &__title{
+        font-size: 24px;
+        margin: 50px;
+        text-align: center;
+        @media all and (max-width: $smartphone) {
+            font-size: 18px;
+        }
+    }
     &__animation{
         margin: 50px;
         background-color: none;
@@ -20,26 +28,15 @@
         justify-content: center;  
         z-index: 100000;
     }
-    &__title{
-        font-size: 24px;
-        margin: 50px;
-        text-align: center;
-        @media all and (max-width: $smartphone) {
-            font-size: 18px;
-        }
-    } 
     &__element {
         border-radius: 100%;
         border: 8px solid $main-color;
         margin: 16px;
+        @for $i from 1 through 3 {
+            &--#{$i} {
+                animation: preloader .6s ease-in-out alternate infinite;
+                animation-delay: 0.2s * $i;
+             }
+        }
     }
-    &__element:nth-child(1) {
-        animation: preloader .6s ease-in-out alternate infinite;
-    }
-    &__element:nth-child(2) {
-        animation: preloader .6s ease-in-out alternate .2s infinite;
-    }  
-    &__element:nth-child(3) {
-        animation: preloader .6s ease-in-out alternate .4s infinite;
-    }    
 }
